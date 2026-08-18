@@ -1,0 +1,229 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+body{
+    background:#1b1b1b;
+    color:white;
+    font-family:Arial, Helvetica, sans-serif;
+}
+
+/* ===== NAVBAR ===== */
+
+.navbar{
+    width:100%;
+    height:80px;
+
+    position:fixed;
+    top:0;
+    left:0;
+
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+
+    padding:0 70px;
+
+    background:#111;
+
+    border-bottom:2px solid #FFD000;
+
+    z-index:1000;
+}
+
+.navbar-logo{
+    color:#FFD000;
+    font-size:30px;
+    font-weight:bold;
+}
+
+.navbar-links{
+    display:flex;
+    list-style:none;
+    gap:40px;
+}
+
+.navbar-links a{
+    color:white;
+    text-decoration:none;
+    font-size:18px;
+    transition:.3s;
+}
+
+.navbar-links a:hover{
+    color:#FFD000;
+}
+
+/* ===== BENEFICIOS ===== */
+
+.benefits{
+    max-width:1200px;
+    margin:80px auto;
+    padding:0 40px;
+    text-align:center;
+}
+
+.benefits h2{
+    font-size:38px;
+    margin-bottom:50px;
+    color:#FFD000;
+}
+
+.benefits-grid{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+    gap:25px;
+}
+
+.benefit-card{
+    background:#252525;
+    padding:35px;
+    border-radius:18px;
+    transition:.3s;
+    border:2px solid transparent;
+}
+
+.benefit-card:hover{
+    transform:translateY(-8px);
+    border-color:#FFD000;
+}
+
+.benefit-card span{
+    font-size:48px;
+    display:block;
+    margin-bottom:15px;
+}
+
+.benefit-card h3{
+    margin-bottom:12px;
+    color:#FFD000;
+}
+
+.benefit-card p{
+    color:#d4d4d4;
+    line-height:1.6;
+}
+
+/* ===== CATEGORÍAS ===== */
+
+.categories{
+    padding:90px 40px;
+    text-align:center;
+}
+
+.categories h2{
+    color:#FFD000;
+    font-size:36px;
+    margin-bottom:50px;
+}
+
+.categories-grid{
+    display:grid;
+    grid-template-columns:repeat(4,1fr);
+    gap:25px;
+    max-width:1100px;
+    margin:auto;
+}
+
+.category-card{
+    background:#242424;
+    border:2px solid transparent;
+    border-radius:18px;
+    padding:35px 20px;
+    font-size:22px;
+    font-weight:bold;
+    cursor:pointer;
+    transition:.35s;
+}
+
+.category-card:hover{
+    transform:translateY(-8px);
+    border-color:#FFD000;
+    background:#2d2d2d;
+    box-shadow:0 10px 25px rgba(255,208,0,.25);
+}
+
+@media(max-width:900px){
+
+.categories-grid{
+grid-template-columns:repeat(2,1fr);
+}
+
+}
+
+/* ===== PRODUCTOS ===== */
+
+.products{
+    padding:100px 8%;
+}
+
+.products h2{
+    text-align:center;
+    font-size:42px;
+    margin-bottom:50px;
+    color:#FFD000;
+}
+
+.products-grid{
+    display:grid;
+    grid-template-columns:repeat(4,1fr);
+    gap:30px;
+}
+
+.product-card{
+    background:#252525;
+    border-radius:18px;
+    padding:25px;
+    text-align:center;
+    border:1px solid transparent;
+    transition:.35s;
+}
+
+.product-card:hover{
+    transform:translateY(-8px);
+    border-color:#FFD000;
+    box-shadow:0 10px 25px rgba(255,208,0,.25);
+}
+
+.product-image{
+    font-size:70px;
+    margin-bottom:20px;
+}
+
+.product-card h3{
+    font-size:24px;
+    margin-bottom:15px;
+}
+
+.price{
+    color:#FFD000;
+    font-size:22px;
+    font-weight:bold;
+    margin-bottom:20px;
+}
+
+.product-card button{
+    width:100%;
+    background:#FFD000;
+    color:#111;
+    border:none;
+    padding:14px;
+    border-radius:10px;
+    font-size:18px;
+    font-weight:bold;
+    cursor:pointer;
+}
+
+.product-card button:hover{
+    background:white;
+}
+
+@media(max-width:900px){
+
+.products-grid{
+grid-template-columns:repeat(2,1fr);
+}
+
+}

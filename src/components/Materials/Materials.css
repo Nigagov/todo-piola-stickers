@@ -1,0 +1,182 @@
+.materials{
+    padding:100px 8%;
+    text-align:center;
+}
+
+.materials h2{
+    font-size:42px;
+    color:#FFD000;
+    margin-bottom:15px;
+}
+
+.materials-subtitle{
+    color:#d0d0d0;
+    font-size:20px;
+    line-height:1.6;
+    margin-bottom:60px;
+}
+
+.materials-grid{
+    max-width:1000px;
+    margin:0 auto;
+
+    display:grid;
+    grid-template-columns:repeat(2,1fr);
+
+    gap:30px;
+}
+
+.material-card{
+    background:linear-gradient(145deg,#252525,#1d1d1d);
+
+    border:2px solid transparent;
+
+    border-radius:22px;
+
+    padding:45px 35px;
+
+    transition:.35s;
+}
+
+.material-card:hover{
+    transform:translateY(-8px);
+
+    border-color:#FFD000;
+
+    box-shadow:0 20px 40px rgba(255,208,0,.18);
+}
+
+.material-icon{
+    font-size:60px;
+
+    margin-bottom:18px;
+}
+
+.material-badge{
+    display:inline-block;
+
+    background:#FFD000;
+    color:#111;
+
+    padding:6px 14px;
+
+    border-radius:20px;
+
+    font-size:12px;
+    font-weight:bold;
+
+    margin-bottom:18px;
+}
+
+.material-card h3{
+    color:#FFD000;
+
+    font-size:28px;
+
+    margin-bottom:15px;
+}
+
+.material-card > p{
+    color:#d6d6d6;
+
+    line-height:1.8;
+
+    font-size:17px;
+
+    margin-bottom:30px;
+}
+
+
+/* ===== OPCIONES DE VINILO ===== */
+
+.vinyl-options{
+    display:flex;
+    flex-direction:column;
+
+    gap:15px;
+
+    margin-top:10px;
+}
+
+.vinyl-option{
+    display:flex;
+
+    align-items:center;
+
+    gap:15px;
+
+    text-align:left;
+
+    background:#191919;
+
+    border:1px solid #383838;
+
+    border-radius:14px;
+
+    padding:18px;
+
+    transition:.3s;
+}
+
+.vinyl-option:hover{
+    border-color:#FFD000;
+
+    transform:translateX(4px);
+}
+
+.vinyl-option > span{
+    font-size:30px;
+
+    min-width:40px;
+
+    text-align:center;
+}
+
+.vinyl-option h4{
+    color:#FFD000;
+
+    font-size:18px;
+
+    margin-bottom:5px;
+}
+
+.vinyl-option p{
+    color:#bdbdbd;
+
+    font-size:14px;
+
+    line-height:1.5;
+
+    margin:0;
+}
+
+
+/* ===== RESPONSIVE ===== */
+
+@media(max-width:900px){
+
+    .materials{
+        padding:80px 30px;
+    }
+
+    .materials-grid{
+        grid-template-columns:1fr;
+    }
+
+}
+
+@media(max-width:600px){
+
+    .materials{
+        padding:80px 20px;
+    }
+
+    .materials h2{
+        font-size:34px;
+    }
+
+    .materials-subtitle{
+        font-size:17px;
+    }
+
+}

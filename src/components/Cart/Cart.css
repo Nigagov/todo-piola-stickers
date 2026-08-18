@@ -1,0 +1,340 @@
+.cart{
+    padding:100px 8%;
+    text-align:center;
+}
+
+.cart h2{
+    font-size:42px;
+    color:#FFD000;
+    margin-bottom:50px;
+}
+
+/* ===== CARRITO VACÍO ===== */
+
+.cart-empty{
+    max-width:600px;
+    margin:0 auto;
+
+    background:linear-gradient(145deg,#252525,#1d1d1d);
+
+    border:2px solid transparent;
+    border-radius:22px;
+
+    padding:50px 30px;
+
+    transition:.35s;
+}
+
+.cart-empty:hover{
+    border-color:#FFD000;
+    box-shadow:0 20px 40px rgba(255,208,0,.18);
+}
+
+.cart-icon{
+    font-size:65px;
+    margin-bottom:20px;
+}
+
+.cart-empty h3{
+    color:#FFD000;
+    font-size:26px;
+    margin-bottom:15px;
+}
+
+.cart-empty p{
+    color:#d6d6d6;
+    line-height:1.7;
+    margin-bottom:30px;
+}
+
+.cart-button-shop{
+    display:inline-block;
+
+    background:#FFD000;
+    color:#111;
+
+    text-decoration:none;
+
+    padding:16px 35px;
+
+    border-radius:12px;
+
+    font-size:18px;
+    font-weight:bold;
+
+    transition:.3s;
+}
+
+.cart-button-shop:hover{
+    transform:translateY(-4px);
+    box-shadow:0 15px 35px rgba(255,208,0,.30);
+}
+
+
+/* ===== CARRITO CON PRODUCTOS ===== */
+
+.cart-container{
+    max-width:1100px;
+    margin:0 auto;
+
+    display:grid;
+    grid-template-columns:2fr 1fr;
+
+    gap:30px;
+
+    text-align:left;
+}
+
+
+/* ===== PRODUCTOS ===== */
+
+.cart-items{
+    display:flex;
+    flex-direction:column;
+    gap:18px;
+}
+
+.cart-item{
+    display:grid;
+
+    grid-template-columns:1fr auto auto;
+
+    align-items:center;
+
+    gap:25px;
+
+    background:linear-gradient(145deg,#252525,#1d1d1d);
+
+    border:2px solid transparent;
+    border-radius:18px;
+
+    padding:25px;
+
+    transition:.3s;
+}
+
+.cart-item:hover{
+    border-color:#FFD000;
+    box-shadow:0 10px 25px rgba(255,208,0,.15);
+}
+
+
+/* ===== INFORMACIÓN DEL PRODUCTO ===== */
+
+.cart-item-info{
+    display:flex;
+    align-items:center;
+    gap:18px;
+}
+
+.cart-item-icon{
+    font-size:45px;
+}
+
+.cart-item-info h3{
+    color:white;
+    font-size:21px;
+    margin-bottom:7px;
+}
+
+.cart-item-info p{
+    color:#bdbdbd;
+    margin:0;
+}
+
+
+/* ===== CANTIDAD ===== */
+
+.cart-item-actions{
+    display:flex;
+    align-items:center;
+    gap:12px;
+}
+
+.cart-item-actions button{
+    width:38px;
+    height:38px;
+
+    border:none;
+    border-radius:8px;
+
+    background:#FFD000;
+    color:#111;
+
+    font-size:20px;
+    font-weight:bold;
+
+    cursor:pointer;
+
+    transition:.25s;
+}
+
+.cart-item-actions button:hover{
+    transform:scale(1.08);
+    background:white;
+}
+
+.cart-item-actions span{
+    min-width:25px;
+
+    text-align:center;
+
+    color:white;
+
+    font-size:18px;
+    font-weight:bold;
+}
+
+.cart-item-actions .remove-button{
+    background:#333;
+    color:white;
+
+    margin-left:8px;
+}
+
+.cart-item-actions .remove-button:hover{
+    background:#FFD000;
+    color:#111;
+}
+
+
+/* ===== PRECIO DEL PRODUCTO ===== */
+
+.cart-item-total{
+    color:#FFD000;
+    font-size:20px;
+    white-space:nowrap;
+}
+
+
+/* ===== RESUMEN ===== */
+
+.cart-summary{
+    background:linear-gradient(145deg,#252525,#1d1d1d);
+
+    border:2px solid #FFD000;
+
+    border-radius:20px;
+
+    padding:30px;
+
+    height:max-content;
+
+    position:sticky;
+    top:110px;
+}
+
+.cart-summary h3{
+    color:#FFD000;
+    font-size:25px;
+
+    margin-bottom:30px;
+}
+
+
+/* ===== TOTAL ===== */
+
+.cart-total{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+
+    padding-bottom:20px;
+
+    border-bottom:1px solid #444;
+
+    margin-bottom:20px;
+}
+
+.cart-total span{
+    color:#d6d6d6;
+    font-size:17px;
+}
+
+.cart-total strong{
+    color:#FFD000;
+    font-size:27px;
+}
+
+.cart-summary p{
+    color:#bdbdbd;
+
+    font-size:14px;
+
+    line-height:1.6;
+
+    margin-bottom:25px;
+}
+
+
+/* ===== WHATSAPP ===== */
+
+.whatsapp-order-button{
+    width:100%;
+
+    background:#FFD000;
+    color:#111;
+
+    border:none;
+
+    padding:17px 20px;
+
+    border-radius:12px;
+
+    font-size:17px;
+    font-weight:bold;
+
+    cursor:pointer;
+
+    transition:.3s;
+}
+
+.whatsapp-order-button:hover{
+    transform:translateY(-4px);
+
+    box-shadow:0 15px 35px rgba(255,208,0,.30);
+
+    background:white;
+}
+
+
+/* ===== RESPONSIVE ===== */
+
+@media(max-width:900px){
+
+    .cart-container{
+        grid-template-columns:1fr;
+    }
+
+    .cart-summary{
+        position:static;
+    }
+
+}
+
+
+@media(max-width:600px){
+
+    .cart{
+        padding:80px 20px;
+    }
+
+    .cart h2{
+        font-size:34px;
+        margin-bottom:35px;
+    }
+
+    .cart-item{
+        grid-template-columns:1fr;
+        gap:20px;
+    }
+
+    .cart-item-actions{
+        justify-content:center;
+    }
+
+    .cart-item-total{
+        text-align:center;
+    }
+
+}
