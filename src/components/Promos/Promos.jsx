@@ -1,100 +1,192 @@
 import "./Promos.css";
 
 function Promos() {
+  const combos = [
+    {
+      id: "stickers-6cm",
+      icon: "🟡",
+      title: "Stickers 6 cm",
+      description:
+        "Elegí la cantidad que necesitás y armá tu combo.",
+      options: [
+        {
+          id: "sticker-6cm-1",
+          quantity: "1 unidad",
+          price: 2000,
+        },
+        {
+          id: "sticker-6cm-10",
+          quantity: "10 unidades",
+          price: 15000,
+        },
+        {
+          id: "sticker-6cm-50",
+          quantity: "50 unidades",
+          price: 40000,
+        },
+      ],
+    },
 
-  const whatsappPlanchas =
-    "https://wa.me/5493571456314?text=Hola%20👋%20Quisiera%20consultar%20por%20los%20combos%20en%20planchas.";
+    {
+      id: "dtf-uv",
+      icon: "🌸",
+      title: "Stickers en DTF UV",
+      description:
+        "Stickers resistentes y con excelente terminación.",
+      options: [
+        {
+          id: "dtf-uv-5cm",
+          quantity: "100 unidades (5 cm)",
+          price: 90000,
+        },
+        {
+          id: "dtf-uv-8cm",
+          quantity: "100 unidades (8 cm)",
+          price: 240000,
+        },
+      ],
+    },
 
-  const whatsappIndividuales =
-    "https://wa.me/5493571456314?text=Hola%20👋%20Quisiera%20consultar%20por%20los%20combos%20individuales.";
+    {
+      id: "tatuajes",
+      icon: "✨",
+      title: "Tatuajes temporales",
+      description:
+        "Ideales para eventos, diseños y momentos especiales.",
+      options: [
+        {
+          id: "tatuajes-30",
+          quantity: "30 unidades",
+          price: 30000,
+        },
+        {
+          id: "tatuajes-50",
+          quantity: "50 unidades",
+          price: 40000,
+        },
+        {
+          id: "tatuajes-100",
+          quantity: "100 unidades",
+          price: 70000,
+        },
+      ],
+    },
+  ];
+
+  function addToCart(combo, option) {
+    const currentCart =
+      JSON.parse(localStorage.getItem("cart")) || [];
+
+    const existingProduct = currentCart.find(
+      (item) => item.id === option.id
+    );
+
+    let updatedCart;
+
+    if (existingProduct) {
+      updatedCart = currentCart.map((item) =>
+        item.id === option.id
+          ? {
+              ...item,
+              quantity: item.quantity + 1,
+            }
+          : item
+      );
+    } else {
+      updatedCart = [
+        ...currentCart,
+        {
+          id: option.id,
+          name: `${combo.title} - ${option.quantity}`,
+          price: option.price,
+          icon: combo.icon,
+          quantity: 1,
+        },
+      ];
+    }
+
+    localStorage.setItem(
+      "cart",
+      JSON.stringify(updatedCart)
+    );
+
+    window.dispatchEvent(
+      new Event("cartUpdated")
+    );
+
+    alert(
+      `${combo.title} (${option.quantity}) fue agregado al carrito 🛒`
+    );
+  }
 
   return (
     <section id="promos" className="promos">
 
-      <h2>🔥 Promos y Combos</h2>
+      <h2>🔥 Combos y precios</h2>
 
       <p className="promos-subtitle">
-        Elegí la opción que mejor se adapte a lo que estás buscando.
+        Elegí la opción que mejor se adapte a lo que necesitás.
       </p>
 
       <div className="promos-grid">
 
-        {/* COMBOS EN PLANCHAS */}
+        {combos.map((combo) => (
 
-        <div className="promo-card">
-
-          <div className="promo-icon">
-            📄
-          </div>
-
-          <span className="badge">
-            COMBOS EN PLANCHAS
-          </span>
-
-          <h3>Combos en planchas</h3>
-
-          <p className="promo-description">
-            Varios stickers reunidos en una misma plancha,
-            ideales para tener diferentes diseños en un solo combo.
-          </p>
-
-          <div className="promo-placeholder">
-            <span>📦</span>
-
-            <p>
-              Consultá disponibilidad y opciones.
-            </p>
-          </div>
-
-          <a
-            href={whatsappPlanchas}
-            target="_blank"
-            rel="noopener noreferrer"
-            className="promo-button"
+          <div
+            className="promo-card"
+            key={combo.id}
           >
-            📱 Consultar combo
-          </a>
 
-        </div>
+            <div className="promo-icon">
+              {combo.icon}
+            </div>
 
+            <h3>{combo.title}</h3>
 
-        {/* COMBOS INDIVIDUALES */}
-
-        <div className="promo-card">
-
-          <div className="promo-icon">
-            ✨
-          </div>
-
-          <span className="badge">
-            COMBOS INDIVIDUALES
-          </span>
-
-          <h3>Combos individuales</h3>
-
-          <p className="promo-description">
-            Combiná diferentes stickers individuales
-            y armá el combo que más te guste.
-          </p>
-
-          <div className="promo-placeholder">
-            <span>🛍️</span>
-
-            <p>
-              Consultá disponibilidad y opciones.
+            <p className="promo-description">
+              {combo.description}
             </p>
+
+            <div className="promo-options">
+
+              {combo.options.map((option) => (
+
+                <div
+                  className="promo-option"
+                  key={option.id}
+                >
+
+                  <div>
+
+                    <span className="option-quantity">
+                      {option.quantity}
+                    </span>
+
+                    <strong>
+                      $
+                      {option.price.toLocaleString("es-AR")}
+                    </strong>
+
+                  </div>
+
+                  <button
+                    type="button"
+                    onClick={() =>
+                      addToCart(combo, option)
+                    }
+                  >
+                    🛒 Agregar
+                  </button>
+
+                </div>
+
+              ))}
+
+            </div>
+
           </div>
 
-          <a
-            href={whatsappIndividuales}
-            target="_blank"
-            rel="noopener noreferrer"
-            className="promo-button"
-          >
-            📱 Consultar combo
-          </a>
-
-        </div>
+        ))}
 
       </div>
 
