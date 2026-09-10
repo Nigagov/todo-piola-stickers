@@ -1,9 +1,13 @@
 .benefits{
     max-width:1200px;
+
     margin:80px auto;
+
     padding:0 40px;
 
     text-align:center;
+
+    background:#ffffff;
 }
 
 .benefits h2{
@@ -17,19 +21,20 @@
 .benefits-grid{
     display:grid;
 
-    grid-template-columns:repeat(4,1fr);
+    grid-template-columns:
+        repeat(4,1fr);
 
     gap:25px;
 }
 
 .benefit-card{
-    background:linear-gradient(145deg,#252525,#1d1d1d);
+    background:#ffffff;
 
     padding:35px 25px;
 
     border-radius:18px;
 
-    border:2px solid transparent;
+    border:2px solid #eeeeee;
 
     transition:.35s;
 }
@@ -39,7 +44,9 @@
 
     border-color:#FFD000;
 
-    box-shadow:0 15px 35px rgba(255,208,0,.18);
+    box-shadow:
+        0 15px 35px
+        rgba(255,208,0,.18);
 }
 
 .benefit-card span{
@@ -51,7 +58,7 @@
 }
 
 .benefit-card h3{
-    color:#FFD000;
+    color:#111111;
 
     font-size:21px;
 
@@ -59,24 +66,18 @@
 }
 
 .benefit-card p{
-    color:#d4d4d4;
+    color:#333333;
 
     line-height:1.6;
 
     font-size:16px;
 }
 
-
-/* ===== RESISTENCIA ===== */
-
 .resistance-card span{
     font-size:34px;
 
     letter-spacing:4px;
 }
-
-
-/* ===== RESPONSIVE ===== */
 
 @media(max-width:1000px){
 

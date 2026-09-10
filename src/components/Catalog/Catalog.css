@@ -1,6 +1,7 @@
 .catalog{
     padding:100px 8%;
     text-align:center;
+    background:#ffffff;
 }
 
 .catalog h2{
@@ -10,29 +11,32 @@
 }
 
 .catalog-subtitle{
-    color:#d0d0d0;
+    color:#111111;
+
     font-size:20px;
     line-height:1.6;
+
     margin-bottom:55px;
 }
 
-
-/* ===== TARJETAS DEL CATÁLOGO ===== */
-
 .catalog-grid{
     max-width:1000px;
+
     margin:0 auto;
 
     display:grid;
-    grid-template-columns:repeat(2,1fr);
+
+    grid-template-columns:
+        repeat(2,1fr);
 
     gap:30px;
 }
 
 .catalog-card{
-    background:linear-gradient(145deg,#252525,#1d1d1d);
+    background:#ffffff;
 
-    border:2px solid transparent;
+    border:2px solid #eeeeee;
+
     border-radius:22px;
 
     padding:45px 35px;
@@ -45,25 +49,22 @@
 
     border-color:#FFD000;
 
-    box-shadow:0 20px 40px rgba(255,208,0,.18);
+    box-shadow:
+        0 20px 40px
+        rgba(255,208,0,.18);
 }
-
-
-/* ===== ICONO ===== */
 
 .catalog-icon{
     font-size:60px;
+
     margin-bottom:20px;
 }
-
-
-/* ===== ETIQUETA ===== */
 
 .catalog-badge{
     display:inline-block;
 
     background:#FFD000;
-    color:#111;
+    color:#111111;
 
     padding:7px 15px;
 
@@ -76,26 +77,20 @@
 }
 
 .catalog-badge.secondary{
-    background:#333;
+    background:#111111;
     color:#FFD000;
 }
 
-
-/* ===== TITULO ===== */
-
 .catalog-card h3{
-    color:#FFD000;
+    color:#111111;
 
     font-size:27px;
 
     margin-bottom:15px;
 }
 
-
-/* ===== TEXTO ===== */
-
 .catalog-card p{
-    color:#d6d6d6;
+    color:#333333;
 
     line-height:1.7;
 
@@ -104,14 +99,11 @@
     margin-bottom:30px;
 }
 
-
-/* ===== BOTONES ===== */
-
 .catalog-button{
     display:inline-block;
 
     background:#FFD000;
-    color:#111;
+    color:#111111;
 
     text-decoration:none;
 
@@ -132,7 +124,9 @@
 .catalog-button:hover{
     transform:translateY(-4px);
 
-    box-shadow:0 15px 35px rgba(255,208,0,.30);
+    box-shadow:
+        0 15px 35px
+        rgba(255,208,0,.30);
 }
 
 .catalog-button-disabled{
@@ -145,23 +139,19 @@
     box-shadow:none;
 }
 
-
-/* ===== BOTON PINTEREST ===== */
-
 .secondary-button{
-    background:#333;
-    color:#FFD000;
+    background:#ffffff;
 
-    border:1px solid #FFD000;
+    color:#111111;
+
+    border:2px solid #FFD000;
 }
 
 .secondary-button:hover{
     background:#FFD000;
-    color:#111;
+
+    color:#111111;
 }
-
-
-/* ===== RESPONSIVE ===== */
 
 @media(max-width:800px){
 

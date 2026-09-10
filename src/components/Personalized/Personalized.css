@@ -1,74 +1,108 @@
 .personalized{
     padding:100px 8%;
     text-align:center;
+    background:#ffffff;
 }
 
 .personalized h2{
     font-size:42px;
+
     color:#FFD000;
+
     margin-bottom:15px;
 }
 
 .personalized-subtitle{
-    color:#d0d0d0;
+    color:#111111;
+
     font-size:20px;
+
     margin-bottom:60px;
 }
 
 .personalized-grid{
     display:grid;
-    grid-template-columns:repeat(3,1fr);
+
+    grid-template-columns:
+        repeat(3,1fr);
+
     gap:30px;
+
     max-width:1100px;
+
     margin:0 auto 50px;
 }
 
 .personalized-card{
-    background:linear-gradient(145deg,#252525,#1d1d1d);
-    border:2px solid transparent;
+    background:#ffffff;
+
+    border:2px solid #eeeeee;
+
     border-radius:22px;
+
     padding:40px 30px;
+
     transition:.35s;
 }
 
 .personalized-card:hover{
     transform:translateY(-8px);
+
     border-color:#FFD000;
-    box-shadow:0 20px 40px rgba(255,208,0,.18);
+
+    box-shadow:
+        0 20px 40px
+        rgba(255,208,0,.18);
 }
 
 .personalized-icon{
     font-size:55px;
+
     margin-bottom:20px;
 }
 
 .personalized-card h3{
-    color:#FFD000;
+    color:#111111;
+
     font-size:24px;
+
     margin-bottom:18px;
 }
 
 .personalized-card p{
-    color:#d6d6d6;
+    color:#333333;
+
     line-height:1.8;
+
     font-size:17px;
 }
 
 .personalized-button{
     display:inline-block;
+
     background:#FFD000;
-    color:#111;
+
+    color:#111111;
+
     text-decoration:none;
+
     padding:17px 38px;
+
     border-radius:12px;
+
     font-size:18px;
+
     font-weight:bold;
+
     transition:.3s;
 }
 
 .personalized-button:hover{
     transform:translateY(-4px);
-    box-shadow:0 15px 35px rgba(255,208,0,.30);
+
+    box-shadow:
+        0 15px 35px
+        rgba(255,208,0,.30);
 }
 
 @media(max-width:900px){

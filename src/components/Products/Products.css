@@ -1,6 +1,7 @@
 .products{
     padding:100px 8%;
     text-align:center;
+    background:#ffffff;
 }
 
 .products h2{
@@ -10,7 +11,7 @@
 }
 
 .products-subtitle{
-    color:#d0d0d0;
+    color:#111111;
     font-size:20px;
     line-height:1.6;
     margin-bottom:55px;
@@ -27,9 +28,9 @@
 }
 
 .product-card{
-    background:linear-gradient(145deg,#252525,#1d1d1d);
+    background:#ffffff;
 
-    border:2px solid transparent;
+    border:2px solid #eeeeee;
     border-radius:22px;
 
     padding:40px 30px;
@@ -44,7 +45,9 @@
 
     border-color:#FFD000;
 
-    box-shadow:0 20px 40px rgba(255,208,0,.18);
+    box-shadow:
+        0 20px 40px
+        rgba(255,208,0,.18);
 }
 
 .product-image{
@@ -54,7 +57,7 @@
 }
 
 .product-card h3{
-    color:#FFD000;
+    color:#111111;
 
     font-size:25px;
 
@@ -62,7 +65,7 @@
 }
 
 .product-description{
-    color:#d6d6d6;
+    color:#333333;
 
     line-height:1.7;
 
@@ -77,7 +80,8 @@
     width:100%;
 
     background:#FFD000;
-    color:#111;
+
+    color:#111111;
 
     border:none;
 
@@ -86,6 +90,7 @@
     border-radius:10px;
 
     font-size:17px;
+
     font-weight:bold;
 
     cursor:pointer;
@@ -94,11 +99,15 @@
 }
 
 .product-card button:hover{
-    background:white;
+    background:#111111;
+
+    color:#ffffff;
 
     transform:translateY(-3px);
 
-    box-shadow:0 10px 25px rgba(255,208,0,.20);
+    box-shadow:
+        0 10px 25px
+        rgba(0,0,0,.15);
 }
 
 
